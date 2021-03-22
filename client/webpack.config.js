@@ -3,9 +3,11 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
+  devtool: 'eval-cheap-module-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
+    historyApiFallback: true,
     open: true,
     port: 9000,
   },
@@ -21,11 +23,12 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   plugins: [new HtmlWebpackPlugin({
     template: './index.html',
   })],
   resolve: {
-    extensions: ['.tsx', '.ts'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
 };
