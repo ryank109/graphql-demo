@@ -1,5 +1,5 @@
 import { createApi } from './create-api';
-import { ListResponse, Resource } from './generic-type';
+import { ListResponse, Resource } from './common';
 
 export type Generation = {
   abilities: Resource[];

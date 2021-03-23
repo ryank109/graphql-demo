@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": "./client",
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "jsx": "react",
     "module": "es6",
